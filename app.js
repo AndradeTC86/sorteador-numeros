@@ -17,7 +17,7 @@ function sortear(){
     }
     let mensagem = `Números sorteados:  ${sorteados}`
     exibirTextoEmTela('resultado', mensagem)
-    mudarClasseBotao('container__botao-desabilitado', 'container__botao')
+    mudarClasseBotao()
 }
 
 function sortearNumero(min, max){
@@ -37,7 +37,7 @@ function mensagemIncial(){
 function reiniciar(){
     mensagemIncial()
     limparCampos()
-    mudarClasseBotao('container__botao', 'container__botao-desabilitado')
+    mudarClasseBotao()
 }
 
 function limparCampos(){
@@ -47,6 +47,11 @@ function limparCampos(){
 
 function mudarClasseBotao(atual, novo){
     let botao = document.getElementById('btn-reiniciar')
-    botao.classList.remove(atual)
-    botao.classList.add(novo)
+    if (botao.classList.contains('container__botao-desabilitado')) {
+        botao.classList.remove('container__botao-desabilitado');
+        botao.classList.add('container__botao');
+      } else {
+        botao.classList.remove('container__botao');
+        botao.classList.add('container__botao-desabilitado');
+      }   
 }
