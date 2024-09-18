@@ -1,5 +1,3 @@
-mensagemIncial()
-
 function sortear(){
     let quantidade = parseInt(document.getElementById('quantidade').value)
     let numInicial = parseInt(document.getElementById('de').value)
