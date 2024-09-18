@@ -1,3 +1,5 @@
+mensagemInicial()
+
 function sortear(){
     let quantidade = parseInt(document.getElementById('quantidade').value)
     let numInicial = parseInt(document.getElementById('de').value)
@@ -38,14 +40,15 @@ function sortearNumero(min, max){
 function exibirTextoEmTela(tag, texto){
     let campo = document.getElementById(tag)
     campo.innerHTML = texto
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2})
 }
 
-function mensagemIncial(){
+function mensagemInicial(){
     exibirTextoEmTela('resultado', 'Números sorteados:  nenhum até agora')
 }
 
 function reiniciar(){
-    mensagemIncial()
+    mensagemInicial()
     limparCampos()
     mudarClasseBotao()
 }
