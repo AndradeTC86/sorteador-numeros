@@ -10,10 +10,12 @@ function sortear(){
     
     if (numInicial >= numFinal) {
         alert('O número final deve ser maior que o número inicial.')
+        return
     }
     
     if (quantidade > (numFinal - numInicial + 1)) {
         alert('A quantidade de números a ser sorteada deve ser menor ou igual ao intervalo disponível.')
+        return
     }
     
     else {
