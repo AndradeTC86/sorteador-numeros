@@ -9,11 +9,11 @@ function sortear(){
     let numero
     
     if (numInicial >= numFinal) {
-        alert("O número final deve ser maior que o número inicial.");
+        alert('O número final deve ser maior que o número inicial.')
     }
     
     if (quantidade > (numFinal - numInicial + 1)) {
-        alert("A quantidade de números a ser sorteada deve ser menor ou igual ao intervalo disponível.");
+        alert('A quantidade de números a ser sorteada deve ser menor ou igual ao intervalo disponível.')
     }
     
     else {
@@ -24,8 +24,7 @@ function sortear(){
             }
             sorteados.push(numero)
         }
-
-        // Exibir o resultado
+        
         let mensagem = `Números sorteados: ${sorteados}`
         exibirTextoEmTela('resultado', mensagem)
         mudarClasseBotao()
@@ -61,10 +60,10 @@ function limparCampos(){
 function mudarClasseBotao(){
     let botao = document.getElementById('btn-reiniciar')
     if (botao.classList.contains('container__botao-desabilitado')) {
-        botao.classList.remove('container__botao-desabilitado');
-        botao.classList.add('container__botao');
+        botao.classList.remove('container__botao-desabilitado')
+        botao.classList.add('container__botao')
       } else {
-        botao.classList.remove('container__botao');
-        botao.classList.add('container__botao-desabilitado');
+        botao.classList.remove('container__botao')
+        botao.classList.add('container__botao-desabilitado')
       }   
 }
