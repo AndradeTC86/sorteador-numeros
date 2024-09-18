@@ -9,13 +9,11 @@ function sortear(){
     let numero
     
     if (numInicial >= numFinal) {
-        alert('O número final deve ser maior que o número inicial.')
-        return
+        alert('O número final deve ser maior que o número inicial.')        
     }
     
-    if (quantidade > (numFinal - numInicial + 1)) {
-        alert('A quantidade de números a ser sorteada deve ser menor ou igual ao intervalo disponível.')
-        return
+    else if (quantidade > (numFinal - numInicial + 1)) {
+        alert('A quantidade de números a ser sorteada deve ser menor ou igual ao intervalo disponível.')        
     }
     
     else {
@@ -32,7 +30,6 @@ function sortear(){
         mudarClasseBotao()
     }
 }   
-
 
 function sortearNumero(min, max){
     return Math.floor(Math.random() * (max -min + 1) + min)
